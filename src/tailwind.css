@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind utilities;
+
+/* Custom components here */
+
+@tailwind components;
+
+.invite-button {
+  @apply 
+    px-8 py-3 after:absolute after:transition-colors
+    after:duration-200 after:inset-0 after:bg-transparent 
+  hover:after:bg-white/30 relative bg-gradient-to-r text-sm 
+    font-bold text-white rounded-full from-lime-green 
+  to-bright-cyan w-fit overflow-hidden;
+}
+.ico-intro-desktop > svg{
+  @apply -top-24 absolute;
+}
+.ico-intro-mobile > svg {
+  @apply fixed ;
+}
+.navigation-list{
+  @apply hidden md:flex relative translate-y-0;
+}
+.navigation-list > li {
+  @apply hover:text-lime-green cursor-pointer transition-colors duration-150;
+}
+.navigation-list.active{
+  box-shadow: 0 10px 10px 2px #000000c9, 0 10px 20px 10px #0000008a;
+  @apply flex absolute md:relative md:shadow-none md:flex-row md:translate-x-0 md:bg-transparent flex-col bottom-0 z-20 origin-top translate-y-[103%] bg-white inset-x-[5%] items-center py-8 p-4 gap-y-4 rounded;
+}
+.card {
+  @apply flex flex-col items-center md:items-start gap-y-4 md:gap-y-8; 
+}
+.card > h2 {
+  @apply  text-xl md:text-2xl text-dark-blue;
+}
+.card > span {
+  @apply text-grayish-blue inline text-center md:text-left;
+}
+
+.article {
+  @apply rounded-lg flex flex-col gap-y-4 overflow-hidden shadow-sm;
+}
+.article > img {
+  @apply md:h-52 h-48 w-full;
+}
+.article > div {
+  @apply flex flex-col gap-y-3 px-6 md:px-3 mb-6;
+}
+.article h3 { 
+  @apply text-lg xl:text-xl text-dark-blue font-bold; 
+}
+.article > div > span:first-child {
+  @apply text-sm text-grayish-blue; 
+}.article > div > span:last-child {
+  @apply text-base text-grayish-blue; 
+}
