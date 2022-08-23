@@ -30,5 +30,6 @@ function toggleClass(el, klass){
 
 updateIcons()
 
-console.log('My modification and pull request');
+console.log('My modification and pull request on a new branch');
+
 
